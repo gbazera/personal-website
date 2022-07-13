@@ -13,9 +13,33 @@ $dark2: #323b47;
 $light1: #ffffff;
 $light2: #e5e8ef;
 
+html{
+	scroll-behavior: smooth;
+}
+
 body {
 	margin: 0 auto;
 	width: 920px;
+}
+
+.btn{
+	padding: 10px 20px;
+	border: none;
+	border-radius: 15px;
+	background-color: $primary;
+	color: $light1;
+	font-size: 16px;
+	outline: 4px transparent solid;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn:hover{
+	filter: brightness(.8);
+}
+
+.btn:focus{
+	outline-color: rgba($primary, .5);
 }
 
 nav {
@@ -128,6 +152,7 @@ section {
 	p:last-of-type {
 		font-size: 16px;
 		color: $light2;
+		margin-top: 20px;
 	}
 }
 
@@ -156,9 +181,8 @@ section {
             opacity: .75;
         }
 	}
-	margin-bottom: 500px;
 
-    .projects{
+    .projs{
         margin-top: 20px;
         display: flex;
     }
@@ -205,4 +229,78 @@ section {
     .proj:hover{
         transform: scale(1.05);
     }
+}
+
+.contact{
+	.heading{
+		font-size: 32px;
+		font-weight: bold;
+		color: $dark1;
+	}
+
+	.top{
+		display: flex;
+		margin-top: 20px;
+
+		p{
+			margin-right: 10px;
+			color: $dark2;
+			font-size: 16px;
+
+			i{
+				color: $primary;
+				font-size: 18px;
+			}
+		}
+	}
+
+	form{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-top: 20px;
+
+		label{
+			font-size: 14px;
+			color: $dark1;
+		}
+
+		input, textarea{
+			background-color: $light2;
+			color: $dark2;
+			border: none;
+			border-radius: 15px;
+			padding: 15px 20px;
+			font-size: 12px;
+			margin: 10px 0;
+			width: 464px;
+			outline: 4px transparent solid;
+			transition: outline-color .3s;
+		}
+
+		input:focus,
+		textarea:focus{
+			outline-color: rgba($primary, .5);
+		}
+
+		button{
+			display: block;
+		}
+	}
+
+	.bot{
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+footer{
+	margin-top: 80px;
+	border-top: 1px $light2 solid;
+	color: $dark2;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	font-size: 14px;
 }

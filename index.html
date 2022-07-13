@@ -10,24 +10,24 @@
 </head>
 <body>
     <nav>
-        <a href="#" class="logo">WEBSITE</a>
+        <a href="#" class="logo">GIORGI BAZERASHVILI</a>
         <ul class="links">
             <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">PROJECTS</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
         </ul>
     </nav>
     <section class="hero">
         <div class="l">
             <p class="heading">Hey, I'm <span>Giorgi.</span></p>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam et dui ac fringilla.
-                Pellentesque dui nunc, tincidunt quis massa et, dictum sagittis elit.
+                17 Year old Front-End Web Developer from Georgia.
             </p>
         </div>
         <div class="img"></div>
     </section>
+    <div id="about"></div>
     <section class="about">
         <img src="./img/about-me.svg" alt="About me image">
         <div class="r">
@@ -40,6 +40,7 @@
             </p>
         </div>
     </section>
+    <div id="projects"></div>
     <section class="projects">
         <div class="top">
             <p class="heading">PROJECTS</p>
@@ -47,7 +48,7 @@
                 <button disabled><i class='bx bx-chevron-left'></i></button><button disabled><i class='bx bx-chevron-right'></i></button>
             </div>
         </div>
-        <div class="projects">
+        <div class="projs">
             <div class="proj">
                 <div class="img" style="background-image: url('./img/projects/0.png');"></div>
                 <div class="bot">
@@ -63,6 +64,38 @@
             </div>
         </div>
     </section>
+    <div id="contact"></div>
+    <section class="contact">
+        <p class="heading">CONTACT ME</p>
+        <div class="top">
+            <p>
+                <i class='bx bx-envelope'></i>
+                bazerashvili.gio27@gmail.com
+            </p>
+            <p>
+                <i class='bx bx-phone'></i>
+                +995 574-14-7*-**
+            </p>
+            <p>
+                <i class='bx bx-map'></i>
+                Georgia
+            </p>
+        </div>
+        <div class="bot">
+            <form action="" name="contact-form" class="contact-form">
+                <label for="contact-email">Email</label>
+                <input type="text" name="contact-email" id="contact-email" placeholder="your@email.com">
+                <label for="contact-message">Message</label>
+                <textarea name="contact-message" id="contact-message" placeholder="Type message here.." rows="5"></textarea>
+                <button class="btn">SEND</button>
+            </form>
+            <img src="./img/contact-me.svg" alt="Contact me image">
+        </div>
+    </section>
+    <footer>
+        <p>gbazera.github.io</p>
+        <p>Copyright (c) 2022. All rights reserved.</p>
+    </footer>
 
     <script src="./script.js"></script>
 </body>

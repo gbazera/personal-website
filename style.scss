@@ -35,11 +35,11 @@ body {
 }
 
 .btn:hover{
-	filter: brightness(.8);
+	filter: brightness(.9);
 }
 
 .btn:focus{
-	outline-color: rgba($primary, .5);
+	outline-color: rgba($primary, .4);
 }
 
 nav {
@@ -88,6 +88,14 @@ nav {
 
 nav.active{
     border-color: $light2;
+}
+
+.burger{
+	font-size: 24px;
+	border: none;
+	background-color: transparent;
+	color: $dark1;
+	cursor: pointer;
 }
 
 section {
@@ -189,8 +197,7 @@ section {
 
     .proj{
         width: 300px;
-        transition: transform .3s;
-        cursor: pointer;
+        transition: outline-color .3s;
 
         .img{
             height: 200px;
@@ -206,10 +213,13 @@ section {
             align-items: center;
             justify-content: space-between;
             padding: 20px;
+			text-decoration: none;
+			transition: background-color .3s;
 
             p{
                 font-size: 16px;
                 color: $dark1;
+				transition: color .3s;
             }
 
             button{
@@ -218,16 +228,13 @@ section {
                 border: none;
                 background-color: transparent;
                 cursor: pointer;
+				transition: color .3s;
             }
         }
     }
 
     .proj:not(:first-of-type){
         margin-left: 15px;
-    }
-
-    .proj:hover{
-        transform: scale(1.05);
     }
 }
 
@@ -280,7 +287,7 @@ section {
 
 		input:focus,
 		textarea:focus{
-			outline-color: rgba($primary, .5);
+			outline-color: rgba($primary, .4);
 		}
 
 		button{
@@ -301,6 +308,58 @@ footer{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 20px;
+	padding: 20px 0;
 	font-size: 14px;
+}
+
+@media screen and (max-width: 920px){
+	body{
+		width: auto;
+		padding: 0 40px;
+	}
+
+	nav{
+		width: auto;
+		margin: 0 auto;
+		position: static;
+		background-color: transparent;
+
+		.links{
+			z-index: 1;
+			background-color: $light1;
+			position: absolute;
+			left: 0;
+			top: 100px;
+			width: 100%;
+			height: calc(100% - 100px);
+			flex-direction: column;
+			align-items: center;
+			transform-origin: right;
+			transform: scaleX(0);
+			transition: transform .3s;
+			
+			a{
+				display: block;
+				margin: 20px 0;
+			}
+		}
+	}
+
+	.hero{
+		.img{
+			display: none;
+		}
+		p{
+			width: 100%;
+		}
+	}
+
+	.about{
+		img{
+			display: none;
+		}
+		.r{
+			margin: 0;
+		}
+	}
 }
